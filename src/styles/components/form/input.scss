@@ -1,0 +1,45 @@
+.input {
+  display: inline-block;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 14px;
+    color: $gray;
+    transition: all .15s ease-in-out;
+    pointer-events: none;
+  }
+
+  input {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid $lightest-gray;
+    padding: 24px 8px 10px 8px;
+    min-width: 300px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.8;
+      cursor: not-allowed;
+      user-select: none;
+      box-shadow: inset 0 0 6px $lightest-gray;
+    }
+
+    &:focus ~ label {
+      font-size: 12px;
+      transform: translateY(calc(-50% - 12px));
+    }
+
+    &:not(:placeholder-shown) ~ label {
+      font-size: 12px;
+      transform: translateY(calc(-50% - 12px));
+    }
+  }
+}

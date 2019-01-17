@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    padding: 0 16px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    display: inline-flex;
+
+    ul {
+      display: inline-flex;
+      height: 80px;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+
+      li {
+        margin: 0 16px;
+
+        a {
+          color: $dark-gray;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

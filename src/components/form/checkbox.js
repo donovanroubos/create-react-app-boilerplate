@@ -34,7 +34,13 @@ class Checkbox extends Component {
           )
         }
         <div className="checkbox" onClick={this.toggleCheck}>
-          <input id={this.id} type="checkbox" checked={isChecked} disabled={disabled} />
+          <input
+            id={this.id}
+            type="checkbox"
+            checked={isChecked}
+            disabled={disabled}
+            readOnly
+          />
           <span>&#10003;</span>
         </div>
       </div>

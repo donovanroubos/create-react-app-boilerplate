@@ -5,6 +5,7 @@ import Input from '../../components/form/input'
 import Checkbox from '../../components/form/checkbox'
 import RadioButton from '../../components/form/radio-option'
 import Select from '../../components/form/select'
+import Slider from '../../components/form/slider'
 
 const ComponentLibrary = () => (
   <main className="page component-library">
@@ -64,8 +65,8 @@ const ComponentLibrary = () => (
     <div className="block" id="radio-button">
       <h2>Radio button</h2>
 
-      <RadioButton disabled />
-      <RadioButton label="Radio button 2" disabled />
+      <RadioButton name="test-123" value="0" disabled />
+      <RadioButton name="test-123" value="0" label="Radio button 2" disabled />
       <RadioButton name="test-123" value="Radio button 3" label="Radio button 3" />
       <RadioButton name="test-123" value="Radio button 4" label="Radio button 4" />
       <RadioButton name="test-123" value="Radio button 5" label="Radio button 5" />
@@ -76,6 +77,10 @@ const ComponentLibrary = () => (
 
       <Select disabled />
       <Select />
+    </div>
+
+    <div className="block" id="slider">
+      <Slider />
     </div>
   </main>
 )
